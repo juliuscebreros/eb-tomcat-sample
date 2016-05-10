@@ -1,0 +1,14 @@
+version: 1
+cron:
+  - name: 'Sites Offline'
+    url: '/alarm-aggregator/rest/sites/monitor/offline'
+    schedule: '*/15 * * * *'
+  - name: 'Devices Offline'
+    url: '/alarm-aggregator/rest/devices/monitor/offline'
+    schedule: '*/15 * * * *'
+  - name: 'Devices Bad Reads'
+    url: '/alarm-aggregator/rest/devices/monitor/badreads'
+    schedule: '0 * * * *'
+  - name: 'Devices Reboots'
+    url: '/alarm-aggregator/rest/devices/monitor/reboots'
+    schedule: '0 * * * *'
