@@ -33,7 +33,7 @@ aws s3 cp "s3://$bucket_name/$scheduled_war" "$temp_dir/alarm-aggregator.war"
 # create a ROOT war file
 # jar -cvf $temp_dir/ROOT.war cron.yaml
 touch $temp_dir/index.html
-jar -cvf $temp_dir/ROOT.war $temp_dir/index.html
+jar -cvf $temp_dir/ROOT.war $temp_dir/index.html cron.yaml
 rm $temp_dir/index.html
 
 
